@@ -1,0 +1,51 @@
+% Template file for a python .format() expansion. irritating that every {{ has to be doubled!
+\subsection{{Movement Profile: {name}}}
+%\begin{{wrapfigure}}[10]{{r}}{{\textwidth}}
+\begin{{figure}}[h!]
+\input{{{name}.disp.pgf}}
+\end{{figure}}
+
+\begin{{wrapfigure}}[12]{{r}}{{0.49\textwidth}}
+\input{{{name}.torque.pgf}}
+\setlength{{\abovecaptionskip}}{{-10pt}}
+\caption{{Predicted torque profile (in black) plotted with 
+motor[s]: {motorNames}.}}
+\end{{wrapfigure}}
+$\,$
+
+\vspace{{0.25cm}}
+
+The above profile shows the displacement (black), velocity (green), 
+and acceleration (blue) of the actuator, and the force needed to
+move the actuator alone (brown), the force from the sprint (magenta),
+and the overall force (red). Inputed zone boundries are marked with
+black circles, and any calibration points with white pluses.
+
+The maximum torque is ${maxTau:.3f}\, \mathrm{{N\sdot m}}$ and
+the maximum velocity is ${maxRps:.1f}\, \mathrm{{s}}^{{-1}}$.
+
+This profile has {zoneN} zones, uses a ${dia}\,\mathrm{{m}}$ pully, and a
+base mass of ${mass}\,\mathrm{{kg}}$ :
+
+\vspace{{5pt}}
+
+\begin{{tabularx}}{{0.49\textwidth}}{{ccccccc}}\hline
+& \footnotesize Name&\footnotesize Color&\footnotesize Spring&\footnotesize Anchor&\footnotesize Friction&\footnotesize Extra M\\
+&&&$(\mathrm{{N\sdot m}})$&$(\mathrm{{m}})$&&$(\mathrm{{kg}})$\\
+\hline
+{zoneRows}
+\\\hline
+\end{{tabularx}}
+
+\vspace{{10pt}}
+Listed calibrations points are :
+
+\begin{{tabularx}}{{0.49\textwidth}}{{ccc}}\hline
+\footnotesize Name&\footnotesize Disp.&\footnotesize Times\\
+\hline
+{calRows}
+\\\hline
+\end{{tabularx}}
+\lstinputlisting[float,floatplacement=h,firstline=1,caption={{input Profile filefor {name} }}]{{{name}.in}}
+\lstinputlisting[float,language=C++,floatplacement=h,firstline=1,caption={{Generated C Code for {name} }}]{{{name}.c}}
+\clearpage

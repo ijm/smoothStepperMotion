@@ -1,0 +1,23 @@
+
+# Velocity profiles defined by specifying the extrema, that is by
+# giving the roots of its derivative.
+#
+# The sign of the poly is that of the first root given.
+#
+# Values in this table are ALL 'X' values
+#
+# The loc-min and loc-max give the X values to use as to find the 
+# polynomial's min and max values to normalize to 0 and 1. A none-numeric
+# value in either colomn causes the code to find the min or max value
+# at one of the roots given.
+
+
+# Colomns :
+# name, loc-min, loc-max, root1, root2, root3, ...
+
+niceCurve   -1.0  auto  1.0  0.0  -1.0                #*\label{code:\lstname-niceCurve}
+flatTop     -1.0  0.0   1.0  0.0  -1.0  0.125 -0.125
+wobble      -1.0  0.0   1.0  0.0  -1.0  0.68  -0.68
+stationary  -1.0  auto
+oneSide      auto auto -1.0  1.0
+

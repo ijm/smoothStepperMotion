@@ -1,0 +1,1222 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{wrapfig}
+\usepackage{tabularx}
+%\usepackage[table]{xcolor}
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+%\definecolor{codegreen}{rgb}{0,0.6,0}
+%\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+%\definecolor{codepurple}{rgb}{0.58,0,0.82}
+%\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+%\definecolor{darkgreen}{rgb}{0.0,0.5,0.0}
+\usepackage{pgf}
+
+\usepackage{adjustbox}
+
+
+
+%\usepackage[pdfborder={0 0 0}]{hyperref} 
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\setlength{\intextsep}{0pt}
+
+%\usepackage[table]{xcolor}
+
+\usepackage{titling}
+\setlength{\droptitle}{-1cm}
+
+\def\thehash{\texttt{\pdfmdfivesum file {\jobname.tex}}}
+
+\chead{}
+\lhead{\@title}
+\rhead{\theauthor}
+\lfoot{\thelicenseFoot}
+\rfoot{\thehash\\ \today}
+\cfoot{\thepage}
+
+\usepackage[
+    type={CC},
+    modifier={by-nc-nd},
+    version={4.0},
+]{doclicense}
+
+\def\boilerplate{
+%\begin{table}[h]
+\begin{tabular*}{1\columnwidth}{@{\extracolsep{\fill}}r>{\raggedright}p{6.3cm}}
+\hline 
+Copyright & \thecopyright\tabularnewline
+License & \thelicenseTab\tabularnewline
+Revisions & \therevisions\tabularnewline
+Hash & \small\thehash\tabularnewline
+\hline 
+\end{tabular*}
+%\end{table}
+}
+
+
+% Listing styles
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\definecolor{darkgreen}{rgb}{0.0,0.5,0.0}
+
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=,
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\scriptsize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+\usepackage{multicol}
+
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{8pt}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+\setlist{nosep}
+%\setlength{\itemsep}{0pt}
+
+\date{}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding utf8x
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2.25cm
+\bottommargin 2.25cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 2
+\papersides 1
+\paperpagestyle fancy
+\listings_params "backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},numberstyle={\tiny\color{codegray}},stringstyle={\color{codepurple}},basicstyle={\tiny},breakatwhitespace=false,breaklines=true,captionpos=b,keepspaces=true,numbers=left,numbersep=5pt,showspaces=false,showstringspaces=false,showtabs=false,tabsize=2"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Simple Smooth Stepper Motor Motion Control
+\end_layout
+
+\begin_layout Author
+I.J.
+ McEwan
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+theauthor{I.J.
+ McEwan}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+thelicenseFoot{$
+\backslash
+;$
+\backslash
+newline
+\backslash
+vbox{
+\backslash
+vspace{-6mm}
+\backslash
+doclicenseImage[imagewidth=16mm]} }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+thelicenseTab{
+\backslash
+doclicenseLongNameRef}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+theaudience{Robotics, and embeded systems}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+thelifetime{Open.}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+thestatus{In preparation.
+ Unpublished.
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+thecopyright{
+\backslash
+copyright 2019,2022 I.J.
+ McEwan.
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+therevisions{V 1.1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+thescope{This is an algorithm description and discussion document.}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+scoderef[2]{
+\backslash
+texttt{
+\backslash
+small #1:
+\backslash
+begin{NoHyper}
+\backslash
+ref{#2}
+\backslash
+end{NoHyper}}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Forward and History
+\end_layout
+
+\begin_layout Standard
+The context and impetus for this project and white paper was a friend's
+ custom 3D printed CNC tool which used a single stepper motor with a pulley
+ and belt, similar to the configuration in many 3D printers, and a sprung
+ loaded tool to perform a repetitive move-and-part tool motion.
+ Unfortunately they weren't able to find a suitably sized stepper motor
+ that was both powerful enough to perform the full motion flawlessly but
+ small enough to not vibrate the printed chassis to pieces.
+ The project also had a pretty underwhelming controller meaning any code
+ solution needed to be very tight.
+ 
+\end_layout
+
+\begin_layout Standard
+I always planed to revisit this and update it to also be able to use splines
+ or NURBS, but ...
+ intentions ...
+\end_layout
+
+\begin_layout Abstract
+
+\series bold
+Stepper motors can produce very high torque, but without profiling and smooth
+ control they can produce significant vibrations, and strain.
+ Using piecewise polynomial profiles can greatly elevate these problems
+ without incurring much additional overhead.
+ Here we provided a simple profiling and code generation system to quickly
+ design programable position, velocity, and torque profiles for a simple
+ stepper-pulley-belt-spring system.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{2mm}
+\backslash
+thispagestyle{fancy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Requirements
+\end_layout
+
+\begin_layout Standard
+The final implementation needs to meet the following requirements :
+\end_layout
+
+\begin_layout Enumerate
+Very quick end to end motor movements.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Minimize vibrations and tool wear.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Smooth"
+
+\end_inset
+
+Smooth velocities and at least piecewise continuous accelerations.
+\end_layout
+
+\begin_layout Enumerate
+Feed forward control only, feed back is limited to position calibration
+ points such as end-stop detectors.
+\end_layout
+
+\begin_layout Enumerate
+Creation of motor torque/speed profiles to help in motor selection.
+\end_layout
+
+\begin_layout Section
+Profiles - Discussion and code description
+\end_layout
+
+\begin_layout Standard
+Requirement 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Smooth"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can be met using functions that be repeatably differentiated and integrate
+ nicely.
+ So for this I have chosen simple polynomials with rational coefficients,
+ as they are particularly easy to work with.
+ Specifically : python handles both rationals and polynomials with easy;
+ polynomials are easy to implement in the generated C code; and should meat
+ all the requirements listed.
+ Alternatives such as splines or NURBS (Non-Uniform Rational B-Splines)
+ are a possible up-scope or expansion for later.
+\end_layout
+
+\begin_layout Standard
+The simulation and generation code executes as follows:
+\end_layout
+
+\begin_layout Standard
+First it reads a configuration file for the polynomials (outlined in Section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Base-Polynomials"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and plotted in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Various-choices-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), the desired movement profile (e.g.
+ Listing 1 and Listing 3) and any motor data provided for comparison [
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scoderef{generate.py}{code:generate-read-profiles}
+\end_layout
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Standard
+From this it computes various timing zones, and linearly transforms the
+ requested polynomial so that the overall distance and velocity functions
+ are smooth and the acceleration function is at least piecewise continuous
+ on these zone boundaries; and the expected accelerations, forces, velocities,
+ and displacements versus time [
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scoderef{generate.py}{code:generate-calculate}
+\end_layout
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Standard
+Next, it plots the various time vs displacement, velocity, acceleration
+ and, force functions (seen in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Examples"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), as well as the torque vs motor speed plots for component comparison and
+ selection [
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scoderef{generate.py}{code:generate-plot}
+\end_layout
+
+\end_inset
+
+].
+ 
+\end_layout
+
+\begin_layout Standard
+The use of polynomials make this straight forward.
+ For example computing the overall force function at any point is given
+ by:
+\begin_inset Formula 
+\begin{align*}
+F(t) & =F_{mass}\left(t\right)+F_{spring}\left(t\right)\\
+ & =m\ddot{x}\left(t\right)+kx\left(t\right)+F_{x_{0}}
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $m$
+\end_inset
+
+ is the mass, 
+\begin_inset Formula $k$
+\end_inset
+
+ is the spring constant, 
+\begin_inset Formula $F_{x_{0}}$
+\end_inset
+
+ is the initial spring force, and 
+\begin_inset Formula $\ddot{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+ are the existing acceleration and displacement polynomials.
+ The result is just another polynomial.
+ 
+\end_layout
+
+\begin_layout Standard
+Similarly the torque and motor speed functions are just scaled (by the radius
+ of the pulley 
+\begin_inset Formula $R_{pulley})$
+\end_inset
+
+ versions of the force and velocity functions.
+\begin_inset Formula 
+\begin{align*}
+\tau(t) & =R_{pulley}F\left(t\right)\\
+\omega(t) & =\frac{1}{2\pi R_{pulley}}\dot{x}(t)
+\end{align*}
+
+\end_inset
+
+As are the displacement and motor speeds in 'step' units :
+\begin_inset Formula 
+\begin{align*}
+X(t) & =\frac{N}{2\pi R_{pulley}}x(t)\\
+\Omega(t) & =N\omega(t)
+\end{align*}
+
+\end_inset
+
+Where 
+\begin_inset Formula $N$
+\end_inset
+
+ is the number of steps per revolution of the stepper motor.
+\end_layout
+
+\begin_layout Standard
+It also calculates the points in time that correspond with any calibration
+ points, such as the location of an end-stop switch or optical marker, given
+ as displacements.
+ i.e.
+ it solves for 
+\begin_inset Formula $t$
+\end_inset
+
+ in 
+\begin_inset Formula $x\left(t\right)=x_{cal}$
+\end_inset
+
+ for all 
+\begin_inset Quotes eld
+\end_inset
+
+calpoint.name
+\begin_inset Quotes erd
+\end_inset
+
+ values in the given profile.
+\end_layout
+
+\begin_layout Standard
+The generator then builds the needed C functions using its computed scale
+ factors and the initial polynomials (not the derived polynomials - this
+ is a time/space trade off, one additional multiply saves an explosion of
+ several polynomials for every zone).
+ Also the resultant constants are fairly nice rational numbers which would
+ make porting this to a non-fpu, integer system much easier [
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scoderef{generate.py}{code:generate-gencode}
+\end_layout
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Standard
+Lastly it builds the plots and resultant data into the reports shown in
+ Section 3 [
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scoderef{generate.py}{code:generate-gendoc}
+\end_layout
+
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Subsection
+The generated code
+\end_layout
+
+\begin_layout Standard
+The generated motor driving functions (e.g.
+ Listings 2 and 4) make use of the way a stepper motor is usually driven,
+ that is, with two signals : a direction bit and a clock-like step bit,
+ so the frequency of the step bit is proportional to the speed of the motor.
+\end_layout
+
+\begin_layout Standard
+If we compute the desired displacement of the motor at time steps 
+\begin_inset Formula $t_{i},t_{i+1},t_{i+2},...$
+\end_inset
+
+ , rounded to the nearest step, and at a high enough frequency, then the
+ lowest bit of those computed displacement will clock at exactly the correct
+ frequency for a stepper motor to follow the programmed motion profile.
+ The direction can be found by differencing the displacements.
+\end_layout
+
+\begin_layout Standard
+This gives the following relationships at time 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ for the clock and direction signals:
+\begin_inset Formula 
+\begin{align*}
+x_{i} & =X\left(t_{i}\right)\\
+\mathrm{clk}_{i} & =\mathrm{floor}\left(2x_{i}\right)\&1\\
+\mathrm{dir}_{i} & =\mathrm{sign}\left(x_{i}-x_{i-1}\right)
+\end{align*}
+
+\end_inset
+
+Where 
+\begin_inset Formula $X()$
+\end_inset
+
+ is the displacement profile as a function of time given above, and 
+\begin_inset Formula $\&1$
+\end_inset
+
+ denotes a 'bit-wise and' with the lowest bit.
+\end_layout
+
+\begin_layout Standard
+This method has several advantages : It's simple; the CPU load is constant
+ and deterministic; Multiple motors can be computed on the same timer.
+\end_layout
+
+\begin_layout Standard
+Its major disadvantage though is that the jitter in pulse timing is proportional
+ to the timer's frequency.
+ Higher frequency gives less jitter, at the expense of higher (but still
+ deterministic) load.
+ (see Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Better-timing"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Note: There are other ways to do this such as solved for 
+\begin_inset Formula $t_{i+1}$
+\end_inset
+
+ in 
+\begin_inset Formula $X\left(t_{i+1}\right)=X\left(t_{i}\right)+1$
+\end_inset
+
+.
+ This has the advantage of very high velocity fidelity, and maximizes the
+ time between outputs, at the cost of an somewhat non-deterministic iterative
+ solve.
+\end_layout
+
+\begin_layout Subsection
+Simulations
+\end_layout
+
+\begin_layout Standard
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Examples"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows two simulated profiles and the C code generated for them.
+ 
+\end_layout
+
+\begin_layout Standard
+The first profile moves the sprung loaded parting tool out of the way for
+ four seconds and then back in three times to part and clean before restarting
+ the motion and moving the tool out of the way again.
+\end_layout
+
+\begin_layout Standard
+The second profile is the same but slightly more aggressive with a small
+ 'wobble' overlayed to reduce the stall load on the stepper motor.
+ 
+\end_layout
+
+\begin_layout Standard
+The C code generated has function of the form 
+\family typewriter
+<name>TimerTick()
+\family default
+ as entry and assumes it can call a function 
+\family typewriter
+motorOutput()
+\family default
+ to set the stepper motors control bit pair.
+\end_layout
+
+\begin_layout Section
+Base Polynomials Functions
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Base-Polynomials"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The simulation and generation code reads in a polynomial description file
+ that contains the roots, sign and normalization points for each named velocity
+ polynomial set.
+ This is really the unscaled acceleration profile, but it is better to think
+ of it as the locations of extrema in the velocity polynomial, as it is
+ the velocity polynomial that is the starting point for everything else.
+ (In fact the scaled acceleration profile is obtain cheaply by differentiation
+ later, and this poly is thrown away after initialization).
+ The velocity profile is found by integrating and normalizing these roots.
+\end_layout
+
+\begin_layout Standard
+For example the 'niceTop' profile [
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scoderef{polynomials.dat}{code:polynomials-niceCurve}
+\end_layout
+
+\end_inset
+
+] is given as :
+\end_layout
+
+\begin_layout Verbatim
+niceCurve -1.0 auto 1.0 0.0 -1.0 
+\end_layout
+
+\begin_layout Standard
+where the first column is the polynomials name, the second and third column
+ specify the input variable (
+\begin_inset Formula $x$
+\end_inset
+
+ locations) to use to normalize the output (
+\begin_inset Formula $y$
+\end_inset
+
+ values) with all subsequent columns being roots of of the polynomial.
+ The the base velocity polynomial is found as :
+\begin_inset Formula 
+\begin{align*}
+f(t) & =\int_{f\left(-1\right)=0}^{\max\left(f\left(x\right)\right)=1}\left(t+1\right)\left(t\right)\left(t-1\right)dt
+\end{align*}
+
+\end_inset
+
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Various-choices-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the polynomials available for the example profiles in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Examples"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement p
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lm{0.42
+\backslash
+textwidth}m{0.4
+\backslash
+textwidth}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{polynomials.tex}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Various-choices-of"
+
+\end_inset
+
+Various choices of polynomials.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Comments and Thoughts.
+\end_layout
+
+\begin_layout Subsection
+Unfinished Todos
+\end_layout
+
+\begin_layout Itemize
+Change the argument handling so it can take more than one motor command
+ line argument, the code is already there to plot several lines, and get
+ the caption correct (with correct color names).
+ 
+\end_layout
+
+\begin_layout Itemize
+Break out code template into its own file.
+\end_layout
+
+\begin_layout Itemize
+Run the generated C code in a harness, read back in and plot the resultant
+ output for comparison, and analyzing things like timing jitter.
+\end_layout
+
+\begin_layout Subsection
+Other thoughts looking back at the code.
+\end_layout
+
+\begin_layout Itemize
+Error reporting sucks: Many more erroneous conditions could be checked and
+ reported, and the current errors are not exactly self explanatory!
+\end_layout
+
+\begin_layout Itemize
+The code really ought to be refactored to be more modular and work with
+ other physical configurations.
+ It's a need-to-get-this-finished mess.
+\end_layout
+
+\begin_layout Subsection
+Extensions, and further work
+\end_layout
+
+\begin_layout Itemize
+Non-zero velocity on zone boundaries: The polynomials used are limited so
+ that the velocity and acceleration of each zone starts at zero and returns
+ to zero.
+ The code already contains the bits necessary to allow velocities to be
+ non-zero at the ends (just as position currently is) but that offset is
+ not tracked through the profiles.
+ Adding this would allow, for example, the motor to reverse direction under
+ constant acceleration, rather than the current slow to a smooth stop, then
+ accelerate in the other direction.
+ 
+\end_layout
+
+\begin_layout Itemize
+Multiple motors: The code only generates one motor profile at a time.
+ It would not be hard to allow multiple motors to controlled at the same
+ time (by extending each line in the .in file).
+\end_layout
+
+\begin_layout Itemize
+Schedule integration: The code just provides a 'tick' function to call,
+ without regard for how the scheduler wants to do things.
+ 
+\end_layout
+
+\begin_layout Itemize
+Better timing
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Better-timing"
+
+\end_inset
+
+: The jitter in position and velocity of the generated code could potentially
+ be improved in two ways,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+When the velocity is slow, the micro-stepping fraction could be changed
+ dynamically and to have more steps and thus higher output frequency, without
+ effecting the timer's frequency.
+\end_layout
+
+\begin_layout Itemize
+The timer's frequency could be dynamically set to always be some multiple
+ of the current velocity.
+ With care taken for zero and maximum velocities.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Conclusion
+\end_layout
+
+\begin_layout Standard
+This project was intended to solve the vibration and profiling problem of
+ a specific physical device, but the ideas and code would be easily converted
+ to an stepper motor based repetitive motion control project.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+boilerplate
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Hidden listings for cross references only
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{adjustbox}{minipage=[t][1mm][t]{100pt}, clip=true, trim=0cm 0cm 0cm
+ 0cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinputlisting[name={generate},escapeinside={
+\backslash
+#*}{*}]{generate.py}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinputlisting[name={polynomials},escapeinside={
+\backslash
+#*}{*}]{polynomials.dat}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{adjustbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+onecolumn 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Examples
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Examples"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+sdot}{{
+\backslash
+mspace{1mu}
+\backslash
+cdot
+\backslash
+mspace{1mu}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{profile1.section.tex}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{profileWobble.section.tex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

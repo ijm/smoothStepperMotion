@@ -1,0 +1,47 @@
+# Units m, kg, s
+
+# Global Constants
+global.baseMass   0.3
+global.smallestDt 0.5
+
+global.pullyDia   0.019
+global.Nsteps     200
+
+# Constants for out of the way environment
+clear.springK   0
+clear.springE0  0
+clear.friction  0
+clear.extraMass 0
+
+# Constants for spring loaded environment
+# Note springE0 set as if the spring isn't confined to the spring domain.
+spring.springK   100.0
+spring.springE0  0.050
+spring.friction  0
+spring.extraMass 0.5
+
+# Calibration points are a set of displacements to find the corrisponding
+# times for.
+calpoint.opt1     0.065
+calpoint.endstop  0.001
+
+# Columns are :
+# Delta x, Delta v, Delta t, Profile, Environment, Description
+
+# Move tool out of the way.
+ 0.150  0.0  0.5  flatTop     clear  Part In 
+
+# Clear in 0.5 seconds, wait 3 and return in 0.5
+ 0.070  0.0  0.5  niceCurve   spring  Tool Out
+ 0.0    0.0  3.0  stationary  spring  Tool Wait
+-0.070  0.0  0.5  niceCurve   spring  Tool In
+
+# End of first part motion 
+-0.150  0.0  0.5  flatTop     clear   Part Out 
+
+# Two more parting motions
+ 0.150  0.0  0.5  flatTop     clear   Part In
+-0.150  0.0  0.5  flatTop     clear   Part Out
+ 0.150  0.0  0.5  flatTop     clear   Part In
+-0.150  0.0  0.5  flatTop     clear   Part Out
+

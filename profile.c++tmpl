@@ -1,0 +1,73 @@
+
+inline int clampint(const int x,const int x0,const int x1) {{ return x<x0 ? x0 : (x>x1 ? x1 : x); }}
+
+enum {{ N = {N}, M = {M} }};
+typedef struct {{
+  float c0, c1, alpha;
+  int pN;
+  }} zone_t;
+
+typedef float Marray_t[M];
+
+static const Marray_t polynomialXCoefs[N] = {{
+{Xcoefs}
+    }};
+
+static const Marray_t polynomialDXCoefs[N] = {{
+{DXcoefs}
+    }};
+
+static const float {name}Dt = {Dt};
+zone_t {name}TimeToZone(float t)
+  {{
+  enum {{ L={L}, K={K} }};
+
+  static const zone_t zones[L] = {{
+{zones}
+  }}; 
+
+  static const int timeInx[K] = {{ {inxa} }};
+
+  return zones[ timeInx[ clampint(t/{name}Dt, 0, L-1) ] ];
+  }}
+
+float calcPoly(const Marray_t *p, const zone_t z, float t)
+  {{
+  const float *c = p[ z.pN ];
+  float s = z.c0 + z.c1 * t ;
+  return z.alpha * {spoly};
+  }}
+
+float {name}TimeToDisp(float t)
+  {{
+  return calcPoly( polynomialXCoefs, {name}TimeToZone(t), t );
+  }}
+
+float {name}TimeToVel(float t)
+  {{
+  return calcPoly( polynomialDXCoefs, {name}TimeToZone(t), t );
+  }}
+
+float xLast, tNow;
+
+void {name}Reset()
+  {{
+  xLast = 0.0; 
+  tNow  = 0.0; /* could also be a tStart = getNow() function */
+  }}
+
+void {name}TimerTick()
+  {{
+  float xNow;
+
+  static const float kMotor = {kMotor};
+
+  tNow += {name}Dt; /* could also be tNow = getNow() - tStart */
+
+  xNow = kMotor * {name}TimeToDisp(tNow) ;
+  motorOutput(  (int)(xNow) & 1, (xNow-xLast < 0) );
+
+  xLast = xNow ;
+  }}
+
+
