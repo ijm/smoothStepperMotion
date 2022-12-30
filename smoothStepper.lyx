@@ -123,17 +123,17 @@ theauthor{I.J.
 \backslash
 def
 \backslash
-thelicenseFoot{$
+thelicenseFoot{
 \backslash
-;$
+small
 \backslash
-newline
+doclicenseName
 \backslash
-vbox{
+
 \backslash
-vspace{-6mm}
+
 \backslash
-doclicenseImage[imagewidth=16mm]} }
+doclicenseIcon} 
 \end_layout
 
 \begin_layout Plain Layout
@@ -153,7 +153,7 @@ doclicenseLongNameRef}
 \backslash
 def
 \backslash
-theaudience{Robotics, and embeded systems}
+theaudience{Robotics and Embeded Systems}
 \end_layout
 
 \begin_layout Plain Layout
